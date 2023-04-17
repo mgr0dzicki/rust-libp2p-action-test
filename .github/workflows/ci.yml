@@ -75,6 +75,7 @@ jobs:
         if: steps.check-released.outputs.code == 200 # Workaround until https://github.com/obi1kenobi/cargo-semver-check/issues/146 is shipped.
         with:
           package: ${{ matrix.crate }}
+          prefix-key: ${{ matrix.crate }}
           rust-toolchain: ''
           verbose: true
 
